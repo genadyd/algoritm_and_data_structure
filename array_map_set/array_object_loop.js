@@ -1,5 +1,5 @@
 let arr0 = new Array(1000000).fill(0).map((val,index)=>index+1)
-let arr1 = new Array(1000000).fill(0).map((val,index)=>Math.floor(Math.random()*1000000))
+let arr1 = new Array(1000000).fill(0).map(()=>Math.floor(Math.random()*1000000))
 // let arr1 = new Array(1000).fill(0)
 //  arr1 = arr1.reduce((r,val)=>{
 //     let v = Math.floor(Math.random()*1000)
@@ -16,9 +16,9 @@ const hash = {}
 // arrRes = arr0.filter(item => arr1.indexOf(item)!==-1)
 // console.log(arrRes)
 // console.log((performance.now()-start)/1000)
-/* perfomance 5.121939999982715 s */
+/* performance 5.121939999982715 s */
 const start = performance.now()
-arr1.forEach((item, key)=>{
+arr1.forEach((item)=>{
     hash[item] = item
 })
 
@@ -28,5 +28,5 @@ let arrRes = []
 
     console.log((performance.now() - start) / 1000, ' '+arrRes.length)
 
-/* perfomance 0.012980000115931034 s */
+/* performance 0.012980000115931034 s */
 
